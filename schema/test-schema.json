@@ -32,7 +32,8 @@
         },
         "tests": {
             "title": "List of tests to run",
-            "$ref": "#/definitions/test"
+            "type": "array",
+             "$ref": "#/definitions/test"
         }
     },
     "definitions": {
@@ -40,6 +41,7 @@
             "$schema": "http://json-schema.org/draft-07/schema#",
             "description": "description",
             "type": "object",
+            "items": true,
             "properties": {
                 "description": {
                     "title": "Test Description",
