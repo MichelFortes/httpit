@@ -62,7 +62,30 @@
                         "/customers"
                     ],
                     "type": "string"
+                },
+                "payload": {
+                    "title": "Path",
+                    "description": "",
+                    "type": "string"
+                },
+                "execution": {
+                    "title": "Execution",
+                    "description": "",
+                    "type": "object",
+                      "$ref": "#/definitions/execution"
                 }
+            }
+        },
+        "execution": {
+            "type": "object",
+            "properties": {
+
+            }
+        },
+        "expectedResults": {
+            "type": "object",
+            "properties": {
+
             }
         }
     }
