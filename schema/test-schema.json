@@ -3,7 +3,7 @@
     "title": "Schema validation for Test Plan",
     "type": "object",
     "required": [
-        "description"
+        "protocol", "host", "port", "tests"
     ],
     "properties": {
         "protocol": {
