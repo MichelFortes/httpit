@@ -9,5 +9,5 @@ go run cmd/httpit.go test-scheme-example.json
 
 ## Using Docker Image
 ```bash
-docker run --rm -v ./test-scheme-example.json:/tmp/test.json apagar /tmp/test.json
+docker run --rm -v ./test-scheme-example.json:/tmp/test.json httpit /tmp/test.json
 ```
