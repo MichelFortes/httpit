@@ -33,13 +33,15 @@
         "tests": {
             "title": "List of tests to run",
             "type": "array",
-             "$ref": "#/definitions/test"
+            "items": {
+                "$ref": "#/definitions/test"
+            }
         }
     },
     "definitions": {
         "test": {
             "$schema": "http://json-schema.org/draft-07/schema#",
-            "description": "description",
+            "description": "Test to run",
             "type": "object",
             "items": true,
             "properties": {
