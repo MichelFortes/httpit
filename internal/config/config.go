@@ -1,24 +1,17 @@
-package cli
+package config
 
 import (
 	"encoding/json"
-	"errors"
 	"os"
 
-	"github.com/MichelFortes/httpit/internal/constraints"
 	"github.com/MichelFortes/httpit/pkg/model"
 )
 
-func GetTestScheme() (*model.TestScheme, error) {
+func GetTestScheme(filename string) (*model.TestScheme, error) {
 
 	scheme := &model.TestScheme{}
 
-	args := os.Args
-	if len(args) != 2 {
-		return scheme, errors.New(constraints.ErrorMissingConfigArg)
-	}
-
-	file, err := os.Open(args[1])
+	file, err := os.Open(filename)
 	if err != nil {
 		return scheme, err
 	}

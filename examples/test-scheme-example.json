@@ -1,0 +1,27 @@
+{
+    "protocol": "https",
+    "host": "jsonplaceholder.typicode.com",
+    "port": 443,
+    "tests": [
+        {
+            "description": "Get TODO item 1",
+            "path": "/todos/1",
+            "method": "GET",
+            "expectedResult": {
+                "statusCode": 200
+            }
+        },
+        {
+            "description": "Create a new post",
+            "path": "/posts",
+            "method": "POST",
+            "payload": "{\"title\":\"foo\",\"body\":\"bar\",\"userId\":1}",
+            "headers": {
+                "Content-type": ["application/json; charset=UTF-8"]
+            },
+            "expectedResult": {
+                "statusCode": 201
+            }
+        }
+    ]
+}
